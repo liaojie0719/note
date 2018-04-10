@@ -1,0 +1,7 @@
+<view class="note-content"  style="background-image:url(../assets/img/note.png)">
+  <canvas bindtouchmove="showTrail" bindtouchend="showLine" style="width: 320px; height: 200px;background:#fff;" canvas-id="firstCanvas"></canvas>
+  <view class="backMain">
+    <image bindtap='closeImg' src='../assets/img/close.png' />
+    <image bindtap='saveImg' src='../assets/img/save.png' />
+  </view>
+</view>

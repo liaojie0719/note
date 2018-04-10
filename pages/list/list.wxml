@@ -1,0 +1,35 @@
+<view class="indexPage">
+  <!--侧边导航栏-->
+  <view class="flex-right" bindtouchstart='scrollydefault' bindtouchmove="indexChange" bindtouchend='indexDefaultSet'>
+    <view 
+      class="each-letter" 
+      wx:for="{{letterArray}}" 
+      bindtouchstart='chosecurrentletter' 
+      data-index="{{item}}" 
+      wx:key="index">
+      {{item}}
+    </view>
+  </view>
+  <!--弹出字母-->
+  <view class="popCar" wx:if="{{currentLetterFlag&&currentLetter}}">{{currentLetter}}</view>
+  <!--展示数据列表-->
+  <view class="flex-content">
+    <scroll-view scroll-y="true" style="height:500px" scroll-into-view="{{currentLetter}}">
+      <view class='li-search' id="search">
+        <view class="content-key myContent">
+          <view class="content-box">
+            <image src='../assets/img/search.png' style="width:14px;height:14px;"/>
+            搜索
+          </view>
+        </view>
+      </view>
+      <view class='li'  wx:for="{{list}}" id="{{item.key}}" wx:key="index" wx:for-index="index" wx:if="{{item.data}}">
+        <view class="content-key">{{item.key}}</view>
+        <view class='a border-bottom'  wx:for="{{item.data}}" wx:for-item="v" wx:key="index2" wx:for-index="index2" data-a="{{index}}" data-b="{{index2}}" bindtap='showsider'>
+          <image class="imgurl" src="{{v.logo}}"></image>
+          <view class="logo-name">{{v.label_name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

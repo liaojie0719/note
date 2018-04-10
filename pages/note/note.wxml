@@ -1,0 +1,17 @@
+<view class="note-content" style="background-image:url(../assets/img/note.png)">
+  <textarea class="write-note" bindblur="bindTextAreaBlur" focus="{{true}}" />
+  <view class="show-photo">
+    <view class="cancel-box" wx:for="{{picture}}">
+      <view class="cancel-it">
+        <icon bindtap='delPictre' type="clear" size="20" color="green" id="{{item.tempFilePaths}}"/>
+      </view>
+      <image class="choose-photo" src="{{item.tempFilePaths}}" /> 
+    </view>
+  </view>
+  <view class="note-footer">
+    <image bindtap='takePhoto' src="../assets/img/photo.png" />
+    <image bindtap="drewPicture" src="../assets/img/white.png" />
+    <image src="../assets/img/share.png" />
+    <image bindtap='saveAll' src="../assets/img/save.png" />
+  </view>
+</view>

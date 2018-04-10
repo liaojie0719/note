@@ -1,0 +1,51 @@
+<view class="content" style="background-image:url(../assets/img/big-bg.png)">
+  <view class="header1">
+    {{year}}
+    <view class="top-triangle">
+      <image src='../assets/img/sanjiao.png' />
+    </view>
+  </view>
+  <view class='header2'>
+    <view class='header-title'>
+      <view bindtap='back'>
+        <image class="direction" src='../assets/img/back.png' />
+      </view>
+      <view bindtap='changeMouth' class="title-content">
+       {{month}} 
+      </view>
+      <view bindtap='next'>
+        <image class="direction"  src='../assets/img/more.png' />
+      </view>
+    </view>
+    <view class="header-content">
+      <view wx:for="{{week}}">{{item}}</view>
+    </view>
+  </view>
+  <view class="calender">
+    <view class="calender-detail" wx:for="{{array}}">
+      <image  wx:if="{{item.isToday == true}}"  src='../assets/img/light-tody.png' />
+      <image  wx:if="{{item.isFree == true}}"  src='../assets/img/light-free.png' />
+      <image  wx:if="{{item.isBusy == true}}"  src='../assets/img/light-busy.png' />
+      <view bindtap='route' class="calender-font {{item.checked == true ? 'gray':''}}" id="{{index}}">{{item.data}}</view>
+      <view wx:if="{{item.checked === true}}" class="choose-way">
+        <view id="{{item.years}}" bindtap='gotoNote' animation="{{otherAnimationData}}" class="busy-circle" style="background:#eb4b53;">忙</view>
+        <view id="{{item.years}}" bindtap='beFree' animation="{{otherAnimationData}}" class="free-circle" style="background:#5ed1c0;">闲</view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view>
+      <image class="circle" src='../assets/img/today.png' />
+      Today
+    </view>
+    <view>
+      <image class="circle"  src='../assets/img/free.png' />
+      Free
+    </view>
+    <view>
+      <image class="circle"  src='../assets/img/busy.png' />
+      Busy
+    </view>
+  </view>
+  <my-component-dialog wx:if="{{dialogShow}}" style="background-image:url(../assets/img/big-bg.png)" class="showMonth" bindmyevent="showDialogData" bind:cancleevent="cancleBtn" dialog-hidden="{{isHidden}}" cancle-btn="{{cancleBtn}}" month-data="{{month}}"/>
+</view>

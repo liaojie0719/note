@@ -1,0 +1,10 @@
+<view class="dialog-box" animation="{{animationData}}"  hidden='{{dialogHidden}}'>
+  <view class='cancel'>
+    <image class="cancelButton"  hidden='{{cancleBtn}}' bindtap='sureBtn' src='../../assets/img/sure.png' />
+    <image class="cancelButton"  hidden='{{cancleBtn}}' bindtap='cancleBtn' src='../../assets/img/cancel.png' />
+  </view>
+  <view bindtap='chooseMon' class="dialog-content" wx:for="{{months}}" id="{{item.id}}">
+    <view class="now-month" wx:if="{{item.now == true}}">{{item.data}}</view> 
+    <view wx:if="{{item.now == false}}">{{item.data}}</view> 
+  </view>
+</view>

@@ -1,0 +1,145 @@
+/* pages/calender/calender.wxss */
+.content {
+  height:504px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.header1 {
+  width: 100%;
+  height:120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  background-color: rgba(223, 237, 237, 0.4);
+  color: #7989a2;
+  font-size: 22px;
+  position: relative;
+  overflow: hidden;
+}
+.header2 {
+  width: 100%;
+  height: 230rpx;
+  background-color: rgba(191,215,215,0.3);
+
+}
+.footer {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: space-around;
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+}
+.header-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.direction {
+  width:30px;
+  height: 30px;
+}
+.title-content {
+  font-size: 28px;
+  color: rgba(255, 255, 255,0.7);
+}
+.header-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+  padding: 0 10px;
+}
+.circle {
+  width:18px;
+  height: 18px;
+  transform: translateY(2px)
+}
+.calender {
+  overflow: hidden;
+}
+.calender-detail {
+  width:14.22%;
+  float: left;
+  text-align: center;
+  padding: 12px 0;
+  color: rgba(255,255,255,0.5);
+  font-size: 18px;
+  position: relative;
+}
+.calender-detail image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top:0;
+  border-radius: 50%;
+  z-index: 10;
+  opacity: 0.6;
+}
+.calender-detail .calender-font {
+  z-index: 999;
+}
+.top-triangle {
+  position: absolute;
+  width:100%;
+  height:25px;
+  left:0;
+  bottom:0;
+  text-align: center;
+}
+.top-triangle  image {
+  width:25px;
+  height: 25px;
+  opacity: 0.6;
+}
+.showMonth {
+  position: fixed;
+  width: 100%;
+  height: 406px;
+  bottom:43px;
+  left: 0;
+}
+.free-circle {
+  position: absolute;
+  border:1px solid #dbdbdb;
+  left:10px;
+  bottom:-25px;
+  z-index: 999;
+  background: #fff;
+  width:30px;
+  height:30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-size: cover;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0;
+}
+.busy-circle {
+  position: absolute;
+  border:1px solid #dbdbdb;
+  right: -25px;
+  top:10px;
+  width:30px;
+  height: 30px;
+  line-height: 30px;
+  z-index: 999;
+  background: #fff;
+  border-radius: 50%;
+  background-size: cover;
+  font-size: 14px;
+  color: #fff;
+  opacity: 0;
+}
+.gray {
+  color: #000;
+}

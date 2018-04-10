@@ -1,0 +1,42 @@
+/* pages/cal/cal.wxss */
+.content {
+  height: 504px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background-image: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1521179694065&di=4dd4fc06ab32efabd8945c7f06e94b44&imgtype=0&src=http%3A%2F%2Fpic1.16pic.com%2F00%2F00%2F98%2F16pic_98589_b.jpg');
+  background-repeat: repeat;
+  padding-top: 30px;
+}
+.screen {
+  background-color: #fff;
+  border-radius: 3px;
+  text-align: right;
+  width: 690rpx;
+  padding: 15rpx;
+  margin-bottom: 30rpx;
+}
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+}
+.item {
+  width: 160rpx;
+  min-height: 150rpx;
+  margin: 10rpx;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 150rpx;
+}
+.orange {
+  color: #fef4e9;
+  border:1px solid #da7c0c;
+  background: #f78d1d;
+}
+.blue {
+  color: #d9eef7;
+  border:1px solid #0076a3;
+  background: #0095cd;
+}

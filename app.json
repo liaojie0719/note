@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/list/list",
+    "pages/calender/calender",
+    "pages/cal/cal",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/note/note",
+    "pages/canvas/canvas"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle":"black"
+  }
+}

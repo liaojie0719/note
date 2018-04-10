@@ -1,0 +1,46 @@
+/* pages/note/note.wxss */
+.note-content {
+  height:504px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.note-footer {
+  position: absolute;
+  width:100%;
+  height:35px;
+  left:0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.note-footer image {
+  width:25px;
+  height: 25px;
+}
+.write-note {
+  padding: 20px;
+  line-height: 30px;
+  font-size: 14px;
+  border-bottom:1px solid #dbdbdb;
+}
+.cancel-box {
+  position: relative;
+}
+.cancel-it {
+  position: absolute;
+  right: 5px;
+  top:-6px;
+}
+.show-photo {
+ display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.show-photo image {
+  width: 80px;
+  height: 100px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  border:1px solid #000;
+}
